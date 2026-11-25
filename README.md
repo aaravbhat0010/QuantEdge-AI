@@ -82,3 +82,8 @@ This is independent technical research, not a peer-reviewed
 publication or financial advice.
 
 Datasets, model weights and credentials are excluded.
+
+## Technical Documentation
+
+- [Experimental benchmarks](docs/benchmarks.md)
+- [Hardware and software environment](docs/environment.md)
