@@ -1,0 +1,29 @@
+data/
+models/
+experiments/
+__pycache__/
+*.pyc
+.venv/
+.env
+*.duckdb
+*.parquet
+*.safetensors
+*.pt
+*.pth
+
+# Credentials and sensitive files
+.env.*
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+.fred_api_key
+.streamlit/secrets.toml
+
+# Large files and local artifacts
+*.zip
+*.csv
+*.log
+*.bin
+*.ckpt
+.ipynb_checkpoints/

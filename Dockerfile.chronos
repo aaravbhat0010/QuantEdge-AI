@@ -1,0 +1,8 @@
+FROM quant-edge-ai:ai
+
+WORKDIR /workspace/quant-edge-ai
+
+RUN python -m pip install --no-cache-dir \
+    "chronos-forecasting==2.3.0" \
+    "transformers==4.57.1" \
+    "torch==2.8.0a0+34c6371d24.nv25.08"

@@ -1,0 +1,5 @@
+FROM quant-edge-ai:chronos
+
+WORKDIR /workspace/quant-edge-ai
+
+RUN python -m pip install --no-cache-dir --no-deps bitsandbytes

@@ -1,0 +1,12 @@
+FROM quant-edge-ai:v1
+
+WORKDIR /workspace/quant-edge-ai
+
+RUN python -m pip install --no-cache-dir \
+    transformers==4.57.1 \
+    peft==0.17.1 \
+    accelerate \
+    safetensors
+
+ENV HF_HOME=/workspace/quant-edge-ai/models/huggingface
+ENV PYTHONUNBUFFERED=1
