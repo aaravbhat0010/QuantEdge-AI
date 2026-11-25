@@ -87,3 +87,54 @@ Datasets, model weights and credentials are excluded.
 
 - [Experimental benchmarks](docs/benchmarks.md)
 - [Hardware and software environment](docs/environment.md)
+
+## System Architecture
+
+    Historical Financial Data
+              |
+    Data Ingestion and FinBERT
+              |
+    DuckDB + Parquet
+              |
+    59 Engineered Features
+              |
+    Chronos-2 Foundation Model
+         /           \
+       LoRA         QLoRA
+         \           /
+    Chronological Backtesting
+              |
+    Streamlit Dashboard
+
+## Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Hardware | NVIDIA Jetson AGX Thor |
+| Deep Learning | PyTorch, CUDA |
+| Foundation Model | Amazon Chronos-2 |
+| NLP | FinBERT |
+| Fine-Tuning | Hugging Face PEFT |
+| Quantization | BitsAndBytes NF4 |
+| Storage | DuckDB, Parquet |
+| Deployment | NVIDIA Docker |
+| Frontend | Streamlit, Plotly |
+
+## Docker Setup
+
+    sudo docker build -t quant-edge-ai:v1 .
+    sudo docker build -f Dockerfile.ai -t quant-edge-ai:ai .
+    sudo docker build -f Dockerfile.chronos -t quant-edge-ai:chronos .
+    sudo docker build -f Dockerfile.qlora -t quant-edge-ai:qlora .
+
+The dashboard requires locally prepared datasets and
+model checkpoints.
+
+## References
+
+- [Chronos-2](https://huggingface.co/amazon/chronos-2)
+- [FinBERT](https://huggingface.co/ProsusAI/finbert)
+- [LoRA](https://arxiv.org/abs/2106.09685)
+- [QLoRA](https://arxiv.org/abs/2305.14314)
+- [FNSPID](https://arxiv.org/abs/2402.06698)
+- [NVIDIA Jetson](https://developer.nvidia.com/embedded-computing)
