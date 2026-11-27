@@ -138,3 +138,9 @@ model checkpoints.
 - [QLoRA](https://arxiv.org/abs/2305.14314)
 - [FNSPID](https://arxiv.org/abs/2402.06698)
 - [NVIDIA Jetson](https://developer.nvidia.com/embedded-computing)
+
+## License
+
+Original source code is licensed under the [MIT License](LICENSE).
+The independent research paper and executive summary are excluded from this grant and remain copyright (c) 2026 Aarav Bhat, all rights reserved, subject to any third-party rights.
+Third-party models, datasets, dependencies and other assets remain subject to their respective licenses and terms. This repository does not grant additional rights to those materials.
